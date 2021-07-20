@@ -80,7 +80,7 @@ def request(flow):
         log("blocked-url: %s" % flow.request.url)
         log("^^^^^^^^^^^^^^^^^^^^ BLOCKED ^^^^^^^^^^^^^^^^^^^^^^^^^^^")
 
-        flow.response = http.HTTPResponse.make(
+        flow.response = http.Response.make(
             200,
             b"BLOCKED.",
             {"Content-Type": "text/html"}
